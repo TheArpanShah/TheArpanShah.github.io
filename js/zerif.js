@@ -1,12 +1,13 @@
 /* ================================
 ===  BACKGROUND SLIDER        ====
 ================================= */
-$(document).ready(function(){
-  $(function(){
-      $(".player").mb_YTPlayer();
 
-      });
-});  
+// $(document).ready(function(){
+//   $(function(){
+//       $(".player").mb_YTPlayer();
+
+//       });
+// });  
 
 $.vegas('slideshow', {
   delay:7000,
