@@ -1,6 +1,13 @@
 /* ================================
 ===  BACKGROUND SLIDER        ====
 ================================= */
+$(document).ready(function(){
+  $(function(){
+      $(".player").mb_YTPlayer();
+
+      });
+});  
+
 $.vegas('slideshow', {
   delay:7000,
   backgrounds:[
@@ -10,12 +17,7 @@ $.vegas('slideshow', {
   ]
 });
       
-$(document).ready(function(){
-  $(function(){
-      $(".player").mb_YTPlayer();
 
-      });
-});  
 /* =================================
    LOADER                     
 =================================== */
