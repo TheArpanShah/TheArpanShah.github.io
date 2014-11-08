@@ -1,6 +1,9 @@
-$(document).ready(function(){
-  $(function(){
-      $(".player").mb_YTPlayer();
 
+$(document).ready(function(){
+	
+  $(function(){
+
+      $(".player").mb_YTPlayer();
+alert("hello");
       });
 }); 
