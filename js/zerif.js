@@ -10,7 +10,12 @@ $.vegas('slideshow', {
   ]
 });
       
-   
+$(document).ready(function(){
+  $(function(){
+      $(".player").mb_YTPlayer();
+
+      });
+});  
 /* =================================
    LOADER                     
 =================================== */
