@@ -50,14 +50,53 @@
 <script src="js/smoothscroll.js"></script>
 <script src="js/jquery.vegas.min.js"></script>
 <script src="js/zerif.js"></script>
-<script>
-$(document).ready(function(){
-  $(function(){
-      $(".player").mb_YTPlayer();
+ <script>
+		jQuery(function(){
+            if (self.location.href == top.location.href){
+                var logo=$("<a href='http://pupunzi.com/#mb.components/components.html' style='position:absolute;top:0;z-index:1000'><img id='logo' border='0' src='http://pupunzi.com/images/logo.png' alt='mb.ideas.repository'></a>");
+                $("#wrapper").prepend(logo);
+                $("#logo").fadeIn();
+            }
+            //debug functions
+            jQuery("#bgndVideo").on("YTPStart", function(){
+                jQuery("#eventListener").html("YTPStart");
+                jQuery("#eventListener").append(" :: (state= "+ jQuery("#bgndVideo").getPlayer().getPlayerState()+")");
+                jQuery("#eventListener").append(" :: (quality= "+ jQuery("#bgndVideo").getPlayer().getPlaybackQuality()+")");
+            });
+            jQuery("#bgndVideo").on("YTPLoop", function(e){
+                jQuery("#eventListener").html("YTPLoop");
+                jQuery("#eventListener").append(" :: (state= "+ jQuery("#bgndVideo").getPlayer().getPlayerState()+")");
+                jQuery("#eventListener").append(" :: "+ e.counter);
+            });
+            jQuery("#bgndVideo").on("YTPEnd", function(){
+                jQuery("#eventListener").html("YTPEnd");
+                jQuery("#eventListener").append(" :: (state= "+ jQuery("#bgndVideo").getPlayer().getPlayerState()+")");
+                console.debug("YTPEnd")
+            });
+            jQuery("#bgndVideo").on("YTPPause", function(){
+                jQuery("#eventListener").html("YTPPause");
+                jQuery("#eventListener").append(" :: (state= "+ jQuery("#bgndVideo").getPlayer().getPlayerState()+")");
+            });
+            jQuery("#bgndVideo").on("YTPBuffering", function(){
+                jQuery("#eventListener").html("YTPBuffering");
+                jQuery("#eventListener").append(" :: (state= "+ jQuery("#bgndVideo").getPlayer().getPlayerState()+")");
+            });
 
-      });
-}); 
-</script>
+            jQuery(".player").mb_YTPlayer({
+                onReady: function(){
+                    jQuery("#eventListener").append(" (Player is ready)");
+                }
+            });
+		});
+
+        var v = false;
+        function changeVideo(){
+            var vID = v ? "7SnmCUwOsts" : "BsekcY04xvQ";
+            jQuery('#bgndVideo').changeMovie({videoURL:vID});
+            $("#vidData").toggle(1000);
+            v = !v;
+        }
+    </script>
 </head>
 
 
@@ -115,7 +154,7 @@ $(document).ready(function(){
 	</div> <!-- / END BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES  -->
 	
 </header> <!-- / END HOME SECTION  -->
-<a id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">My video</a>
+<a id="bgndVideo" class="player" data-property="{videoURL:'7SnmCUwOsts',containment:'body', showControls:true, autoPlay:true, loop:false, vol:50, mute:true, startAt:10, opacity:1, addRaster:false, quality:'default'}">My video</a> <!--BsekcY04xvQ-->
 <!-- =========================
    FOCUS SECTION      
 ============================== -->
