@@ -1,8 +1,0 @@
-<!doctype html>
-<html lan=en>
-<head>
-</head>
-<body>
-<a class="player mb_YTVPlayer" data-property="{videoURL:'https://www.youtube.com/watch?v=dum1Gh-FE9Q',containment:'#intro-video',autoPlay:true, mute:true, startAt:0, printUrl:false,showControls:false, opacity:1, quality: 'highres'}" id="id_1414789871770" style="position: relative; background: none;"></a>
-</body>
-</html>
