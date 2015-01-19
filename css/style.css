@@ -208,6 +208,14 @@ html, body {height: 100%;}
 
 .banner-inner { padding-top:115px; padding-bottom: 30px; background-image: url(../img/skyline6.jpg); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:100%; position: relative; z-index: ;}
  
+ #banner-content {background: #1A1A1A; position: relative; z-index: 1; }
+.header-text {}
+.header-text h1 {font-size: 50px; color: #FFF;  border-bottom:1px solid rgba(0,0,0,0.1); padding-bottom: 10px;}
+.header-text h2 {color: #FFF;}
+.header-text li {color: #FFF;}
+.header-text p {color: #E7E7E7;}
+
+.banner-inner-content { padding-top:115px; padding-bottom: 100px; background-image: url(../img/skyline-short.png); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:100%; position: relative; z-index: ;}
 /* ==========================================================================
 Intro
 ========================================================================== */ 
