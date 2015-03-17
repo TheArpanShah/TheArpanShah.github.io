@@ -12,7 +12,8 @@
 	<script>
 	function GetUrlValue(VarSearch) {
 		var SearchString = window.location.search.substring(1);
-		alert(SearchString);
+		var VariableArray = SearchString.split('&');
+		alert(VariableArray);
 	}
 
 	
