@@ -11,8 +11,11 @@
 
 	<script>
 	function GetUrlValue(VarSearch) {
-		window.location.search;
+		var SearchString = window.location.search.substring(1);
+		alert(SearchString);
 	}
+
+
 	</script>
 
 </body>
