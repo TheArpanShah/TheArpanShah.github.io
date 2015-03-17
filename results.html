@@ -15,13 +15,16 @@
 		var VariableArray = SearchString.split('&');
 		for(var i = 0; i < VariableArray.length; i++){
 			var KeyValuePair = VariableArray[i].split('=');
-    	}	
 
-		alert(KeyValuePair[2]);	
+			if(KeyValuePair[0] == VarSearch){
+            	return KeyValuePair[1];
+    		}	
+		}
 	}
 
-	
+	alert(GetUrlValue('company18'));
 
+	
 	</script>
 
 </body>
