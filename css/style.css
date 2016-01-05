@@ -23,6 +23,14 @@ h1, h2, h3, h4, h5, h6 { margin-top: 0;  margin-bottom: 10px;}
   -moz-osx-font-smoothing: grayscale;
 }
 
+.content-small {
+  font-family: 'Lato', arial, sans-serif;
+  color: #444444;
+  font-size: 11px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 
 h2 {color: #1A1A1A; font-weight: 600; margin-bottom: 20px; }
@@ -215,7 +223,7 @@ html, body {height: 100%;}
 .header-text li {color: #FFF;}
 .header-text p {color: #E7E7E7;}
 
-.banner-inner { padding-top:115px; padding-bottom: 30px; background-image: url(../img/skyline6.jpg); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:100%; position: relative; z-index: ;}
+.banner-inner { padding-top:115px; padding-bottom: 30px; background-image: url(../img/light3.png); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:100%; position: relative; z-index: ;}
  
  #banner-content {background: #1A1A1A; position: relative; z-index: 1; }
 .header-text {}
@@ -224,7 +232,7 @@ html, body {height: 100%;}
 .header-text li {color: #FFF;}
 .header-text p {color: #E7E7E7;}
 
-.banner-inner-content { padding-top:115px; padding-bottom: 100px; background-image: url(../img/skyline-short.png); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:100%; position: relative; z-index: ;}
+.banner-inner-content { padding-top:115px; padding-bottom: 100px; background-image: url(../img/cityline_100_compressed.png); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:100%; position: relative; z-index: ;}
 /* ==========================================================================
 Intro
 ========================================================================== */ 
@@ -441,6 +449,12 @@ Footer
 	#footer a:hover {color: #FFF;}
 #footer hr {border-top:1px solid rgba(255,255,255,0.2); margin-top: 35px; margin-bottom: 35px;}
 
+hr.style1 {
+	margin-top: 40px; 
+	margin-bottom: 60px; 
+	border-top: 1px solid #969696;
+}
+
 .quick-links {margin-left: 10px;}
 .quick-links li {list-style-type: square; margin-bottom: 10px;}
 .copyright {float: right;}
@@ -571,3 +585,29 @@ a.scroll-up:focus { -moz-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1
 	.copyright {float: none;}
 }
 
+/* ------ Search Results  ------*/
+@import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+
+.container { margin-top: 20px; }
+.mb20 { margin-bottom: 20px; } 
+
+hgroup { padding-left: 15px; border-bottom: 1px solid #ccc; }
+hgroup h1 { font: 500 normal 1.625em "Roboto",Arial,Verdana,sans-serif; color: #2a3644; margin-top: 0; line-height: 1.15; }
+hgroup h2.lead { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; color: #2a3644; margin: 0; padding-bottom: 10px; }
+
+.search-result .thumbnail { border-radius: 0 !important; }
+.search-result:first-child { margin-top: 0 !important; }
+.search-result { margin-top: 20px; }
+.search-result .col-md-2 { border-right: 1px dotted #ccc; min-height: 140px; }
+.search-result ul { padding-left: 0 !important; list-style: none;  }
+.search-result ul li { font: 400 normal 1.25em "Roboto",Arial,Verdana,sans-serif;  line-height: 30px; }
+.search-result ul li i { padding-right: 5px; }
+.search-result .col-md-7 { position: relative; }
+.search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 0 !important; margin-bottom: 10px !important; color:#ffffff;}
+.search-result h3 > a, .search-result i { color: #248dc1 !important; }
+.search-result p { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; } 
+.search-result span.plus { position: absolute; right: 0; top: 126px; }
+.search-result span.plus a { background-color: #248dc1; padding: 5px 5px 3px 5px; }
+.search-result span.plus a:hover { background-color: #414141; }
+.search-result span.plus a i { color: #fff !important; }
+.search-result span.border { display: block; width: 97%; margin: 0 15px; border-bottom: 1px dotted #ccc; }
