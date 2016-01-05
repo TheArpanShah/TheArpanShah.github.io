@@ -1,6 +1,6 @@
 <?php 
 $answers = $_POST;
- $url1 = "http://wwww.energybillquote.com/results.html";
+ $url1 = "http://www.energybillquote.com/results.html";
 
  $var1 = "?company18=".urlencode($answers[company18]);
  $var2 = "&name19=".urlencode($answers[name19]);

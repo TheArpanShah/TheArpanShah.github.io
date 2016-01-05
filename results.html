@@ -1,10 +1,10 @@
 <html>
 <head>
-	<title>EneryBillQuote Search Result</title>
+	<title>EnergyBillQuote Search Result</title>
 </head>
 
 <body>
-	<h1>Results page successul: Eligo is your perfect match!</h1>
+	<h1>Results page successful: Eligo is your perfect match!</h1>
 
 	<p>Click on the button to see the link</p>
 	<button onclick="GetUrlValue()">Try it</button>
@@ -17,13 +17,12 @@
 		var a2 = b[1];
 		var a3 = b[2];
 		var a4 = b[3];
-		var url1 = a1.replace("company18", "lead[org_name");
+		var url1 = a1.replace("company18", "lead[org_name]");
 		var url2 = a2.replace("name19", "lead[first_name]");
-		alert(url1);	
+		var url3 = a3.replace("email", "lead[email]");
+		var url4 = a4.replace("phone", "lead[phone]");
+		window.location.replace("http://www.eligoenergy.com/signup/commercial?" + url1 + "&" + url2 + "&" + url3 + "&" + url4);	
 	}
-
-	
-
 	
 	</script>
 
