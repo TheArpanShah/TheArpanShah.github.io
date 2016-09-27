@@ -1,125 +1,55 @@
-// --------------------------------------------------------
-//	Slider Caption
-// -------------------------------------------------------- 
-$(document).ready(function() {	
-    $("a[data-gal^='prettyPhoto']").prettyPhoto(); // Pretty Photo for Lightbox Image
-});
+// var w = $(window).width();
+// $('#size_tracker').text(w);
 
-// --------------------------------------------------------
-//	Scroll Up
-// -------------------------------------------------------- 	
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 100) {
-		$('.scroll-up').fadeIn();
-	} else {
-		$('.scroll-up').fadeOut();
+function toggle_1() {
+	
+
+	if($('#FAQ-answer-1').css('display') == 'none'){
+
+
+		$('#FAQ-answer-1').fadeIn("slow").css('display', 'block');
+		
 	}
-});
-
-$('.scroll-up').click(function() {
-	$("html, body").animate({
-		scrollTop: 0
-	}, 600);
-	return false;
-});
-
-// --------------------------------------------------------
-//	Navigation Bar
-// -------------------------------------------------------- 	
-$(window).scroll(function(){	
-	"use strict";	
-	var scroll = $(window).scrollTop();
-	if( scroll > 60 ){		
-		$(".navbar").addClass("scroll-fixed-navbar");				
-	} else {
-		$(".navbar").removeClass("scroll-fixed-navbar");
+	else{
+		$('#FAQ-answer-1').css('display','none');
 	}
-});
-
-// --------------------------------------------------------
-//	Smooth Scrolling
-// -------------------------------------------------------- 	
-$(".navbar-nav li a[href^='#']").on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $(this.hash).offset().top
-    }, 1000);
-});
-
-// --------------------------------------------------------
-//	Accordion (FAQ)
-// -------------------------------------------------------- 
-function toggleIcon(e) {
-	$(e.target)
-		.prev('.panel-heading')
-		.find('.panel-title a')
-		.toggleClass('active')
-		.find("i.fa")
-		.toggleClass('fa-plus-square fa-minus-square');
 }
-$('.panel').on('hidden.bs.collapse', toggleIcon);
-$('.panel').on('shown.bs.collapse', toggleIcon);
 
-// --------------------------------------------------------
-//	Banner Form
-// -------------------------------------------------------- 
-$('#banner-form').on('submit', function(e) {
-    e.preventDefault(); //Prevents default submit
-    var form = $(this);
-    var post_url = form.attr('action');
-    var post_data = form.serialize(); //Serialized the form data for process.php
-    $('.form-process').html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
-    $.ajax({
-        type: 'POST',
-        url: 'banner-form.php', // Your form script
-        data: post_data,
-        success: function(msg) {
-            $(form).fadeOut(500, function() {
-                form.html(msg).fadeIn();
-            });
-        }
-    });
-});
-
-// --------------------------------------------------------
-//	Middle Form
-// -------------------------------------------------------- 
-$('#middle-form').on('submit', function(e) {
-    e.preventDefault(); //Prevents default submit
-    var form = $(this);
-    var post_url = form.attr('action');
-    var post_data = form.serialize(); //Serialized the form data for process.php
-    $('.form-process-middle').html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
-    $.ajax({
-        type: 'POST',
-        url: 'middle-form.php', // Your form script
-        data: post_data,
-        success: function(msg) {
-            $(form).fadeOut(500, function() {
-                form.html(msg).fadeIn();
-            });
-        }
-    });
-});
+function toggle_2() {
+	if($('#FAQ-answer-2').css('display') == 'none'){
 
 
-// --------------------------------------------------------
-//	Contact Form
-// -------------------------------------------------------- 
-$('#contact-form').on('submit', function(e) {
-    e.preventDefault(); //Prevents default submit
-    var form = $(this);
-    var post_url = form.attr('action');
-    var post_data = form.serialize(); //Serialized the form data for process.php
-    $('.form-process-contact').html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
-    $.ajax({
-        type: 'POST',
-        url: 'contact-form.php', // Your form script
-        data: post_data,
-        success: function(msg) {
-            $(form).fadeOut(500, function() {
-                form.html(msg).fadeIn();
-            });
-        }
-    });
-});
+		$('#FAQ-answer-2').fadeIn("slow").css('display', 'block');
+	}
+	else{
+		$('#FAQ-answer-2').css('display','none');
+	}
+}
+
+function toggle_3() {
+	if($('#FAQ-answer-3').css('display') == 'none'){
+
+
+		$('#FAQ-answer-3').fadeIn("slow").css('display', 'block');
+		
+	}
+	else{
+		$('#FAQ-answer-3').css('display','none');
+	}
+}
+
+function toggle_4() {
+	if($('#FAQ-answer-4').css('display') == 'none'){
+
+		$('#FAQ-answer-4').fadeIn("slow").css('display', 'block');
+	}
+	else{
+		$('#FAQ-answer-4').css('display','none');
+	}
+}
+
+
+$('#FAQ-question-1').click(toggle_1);
+$('#FAQ-question-2').click(toggle_2);
+$('#FAQ-question-3').click(toggle_3);
+$('#FAQ-question-4').click(toggle_4);	
